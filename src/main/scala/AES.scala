@@ -43,19 +43,19 @@ object AES {
     */
   private def hash16(str: String) = hash(str).take(16)
 
-
-  type CipherMode = Int
   /**
     * helper function to initialize the cipher for encryption or decryption
     * initializes a cipher to encrypt or decrypt a String with the AES encryption
     * standard and the supplied private key.
     *
     * The private key must have a length of 16 bytes.
+    * The transformation algorithm used is `AES/CBC/PKCS5Padding`.
     *
     * @param ivSalt
     * @param encryptOrDecrypt is either Cipher.ENCRYPT_MODE or Cipher.DECRYPT_MODE
     * @return Cipher initialized to encrypt or to decrypt depending on the value of encryptOrDecrypt
     */
+  type CipherMode = Int
   private def initCipher(ivSalt: String, encryptOrDecrypt: CipherMode) = {
     val skeySpec = new SecretKeySpec(privateKey, "AES")
     val cipher = Cipher.getInstance(transformation)
@@ -82,7 +82,6 @@ object AES {
     val cipher: Cipher = initCipher(ivSalt, Cipher.ENCRYPT_MODE)
     Codecs.toHexString(cipher.doFinal(value.getBytes("utf-8")))
   }
-
 
   /**
     * Decrypt a String with the AES encryption standard.

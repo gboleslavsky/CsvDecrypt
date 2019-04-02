@@ -47,8 +47,8 @@ object CsvCryptoDemo extends App{
                             })
 
   // read and decrypt a line of encrypted text data with salt as the first field
-  def decryptLine(plainLine: String): String = {
-    val encryptedRow = plainLine.split(",").map(_.trim).toList
+  def decryptLine(encryptedLine: String): String = {
+    val encryptedRow = encryptedLine.split(",").map(_.trim).toList
     val rowSalt = encryptedRow(0)
     (encryptedRow.drop(1).map(decrypt(_, rowSalt))).mkString(",")
   }

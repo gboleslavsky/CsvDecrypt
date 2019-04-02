@@ -7,7 +7,7 @@ A. To run:
 - Clone the repository in some local folder:
     git clone https://github.com/gboleslavsky/CsvDecrypt.git
 
-- Navigate to a directory created there:
+- Navigate to a CsvDecrypt directory created there:
     cd CsvDecrypt
 
 - run it:
@@ -15,7 +15,7 @@ A. To run:
 
     this compiles the two files and runs the app, CsvCryptoDemo.
 
-- Examine contents of a new subdirectory the app created, testData.
+- Examine contents of a new subdirectory of CsvDecrypt directory the app created, testData.
 
 B. What the app does:
 

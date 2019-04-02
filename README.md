@@ -29,8 +29,8 @@ To see it work on more and/or different input, simply edit PlainTextData.csv usi
 The app will not overwrite PlainTextData.csv if it's already there, and EncryptedData.csv and DecryptedData.csv always reflect encryption/decryption of
 the data the app finds in PlainTextData.csv
 
-The app works if the contents of PlainTextData.csv and DecryptedData.csv have identical contents (except for blank spaces, which get trimmed
-before encryption so decrypted empty fields are just empty strings).
+The app works if the contents of PlainTextData.csv and DecryptedData.csv are identical (except for blank spaces, which get trimmed
+before encryption so decrypted empty fields are just empty strings and not original spaces that stood for null fields).
 
 Unit tests were neglected.
 

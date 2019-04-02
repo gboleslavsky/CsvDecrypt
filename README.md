@@ -25,11 +25,14 @@ To demonstrate the functionality of decrypting encrypted data:
 contains a new first field used as salt
 - finally it generates a file DecryptedData.csv that contains the data from EncryptedData.csv decrypted using the salt for each row.
 
-It works if the contents of PlainTextData.csv and DecryptedData.csv have identical contents (except for blank spaces, which get trimmed
-before encryption so decrypted empty fields are just empty strings.
-
 To see it work on more and/or different input, simply edit PlainTextData.csv using the same simple csv format and run the app again.
-The app will not overwrite it if it's already there, and EncryptedData.csv and DecryptedData.csv always reflect encryption/decryption of
+The app will not overwrite PlainTextData.csv if it's already there, and EncryptedData.csv and DecryptedData.csv always reflect encryption/decryption of
 the data the app finds in PlainTextData.csv
+
+The app works if the contents of PlainTextData.csv and DecryptedData.csv have identical contents (except for blank spaces, which get trimmed
+before encryption so decrypted empty fields are just empty strings).
+
+Unit tests were neglected.
+
 
 

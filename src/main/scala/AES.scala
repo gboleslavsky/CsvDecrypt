@@ -69,7 +69,7 @@ object AES {
     *
     * The private key must have a length of 16 bytes.
     *
-    * The provider used is by default this uses the platform default JSSE provider.  This can be overridden by defining
+    * The provider used is  the platform default JSSE provider.  In a real app this can be overridden by defining
     * `application.crypto.provider` in `application.conf`.
     *
     * The transformation algorithm used is `AES/CBC/PKCS5Padding`.
